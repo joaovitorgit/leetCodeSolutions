@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+       unordered_map<int,int> hash;
+	   for(auto element: nums)
+		   hash[element]++;
+	   for(auto element:hash)
+		   if(element.second==1)
+			   return element.first;
+	   return -1;
+    }
+};
