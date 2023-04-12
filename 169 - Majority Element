@@ -1,0 +1,15 @@
+ class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        unordered_map<int,int> hash;
+        for( auto element: nums){
+            hash[element]++;
+        }
+        for(auto element:hash){
+            if(element.second > floor(nums.size()/2)){
+                return element.first;
+            }
+        }
+        return 0;
+    }
+};
