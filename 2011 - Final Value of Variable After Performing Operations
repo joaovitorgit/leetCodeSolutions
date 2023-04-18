@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int finalValueAfterOperations(vector<string>& operations) {
+        int count = 0;
+        for(string g:operations){
+            if(g[0]=='+'||g[2]=='+'){
+                count++;
+            }else{
+                count--;
+            }
+
+        }
+        return count;
+    }
+};
